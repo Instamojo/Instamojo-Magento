@@ -34,7 +34,7 @@ class Instamojo_Imojo_Model_PaymentMethod extends Mage_Payment_Model_Method_Abst
     // Construct the redirect URL
     public function getOrderPlaceRedirectUrl()
     {   
-        Mage::Log('Step 2 Process: Getting the redirect URL.....: ' . Mage::getUrl('imojo/payment/redirect'));
+        Mage::Log('Step 2 Process: Getting the redirect URL: ' . Mage::getUrl('imojo/payment/redirect'));
         // 
         return Mage::getUrl('imojo/payment/redirect');      
     }

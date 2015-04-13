@@ -32,6 +32,8 @@ class Instamojo_Imojo_PaymentController extends Mage_Core_Controller_Front_Actio
             $private_salt = Mage::getStoreConfig('payment/imojo/private_salt');
             $custom_field = Mage::getStoreConfig('payment/imojo/custom_field');
 
+            Mage::log("Data from Backend: $url | $api_key | $auth_token | $private_salt | $custom_field");
+
             $data = Array();
             $data['data_email'] = substr($email, 0, 75);
             $data['data_name'] = substr($name, 0, 20);
@@ -39,10 +41,16 @@ class Instamojo_Imojo_PaymentController extends Mage_Core_Controller_Front_Actio
             $data['data_amount'] = $amount;
             $data['data_' . $custom_field] = $rmTranid . "-". $orderId;
 
+            Mage::log("Transaction-order ID: " . ($rmTranid . "-". $orderId));
+
+
+
             ksort($data, SORT_STRING | SORT_FLAG_CASE);
             $message = implode('|', $data);
             $sign = hash_hmac("sha1", $message, $private_salt);
             $data['data_sign'] = $sign;
+
+            Mage::log("Signature is: $sign");
 
             $link= $url . "?intent=buy&";
             $link .= "data_readonly=data_email&data_readonly=data_amount&data_readonly=data_phone&data_readonly=data_name&data_readonly=data_$custom_field&data_hidden=data_$custom_field";
@@ -181,7 +189,7 @@ class Instamojo_Imojo_PaymentController extends Mage_Core_Controller_Front_Actio
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array("X-Api-Key:$api_key",
-                                                        "X-Auth-Token:$auth_token"));
+                                                       "X-Auth-Token:$auth_token"));
             $response = curl_exec($ch);
             $res = json_decode($response, true);
             curl_close($ch);   
