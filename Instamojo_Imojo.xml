@@ -1,5 +1,5 @@
 <_>
-   <form_key>zH7PtorwZXYL9REu</form_key>
+   <form_key>7c3qDQItWnbDNFBc</form_key>
    <name>Instamojo_Imojo</name>
    <channel>community</channel>
    <version_ids>
@@ -43,7 +43,7 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
             <max/>
          </max>
          <files>
-            <files>            </files>
+            <files>                 </files>
          </files>
       </package>
       <extension>
@@ -62,20 +62,25 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
       <target>
          <target>magelocal</target>
          <target>magelocal</target>
+         <target>magedesign</target>
       </target>
       <path>
          <path/>
          <path>Instamojo</path>
+         <path>frontend/base/default/template/imojo</path>
       </path>
       <type>
          <type>file</type>
+         <type>dir</type>
          <type>dir</type>
       </type>
       <include>
          <include/>
          <include/>
+         <include/>
       </include>
       <ignore>
+         <ignore/>
          <ignore/>
          <ignore/>
       </ignore>
