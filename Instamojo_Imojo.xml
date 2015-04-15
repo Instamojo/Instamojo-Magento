@@ -1,20 +1,20 @@
 <_>
-   <form_key>7c3qDQItWnbDNFBc</form_key>
+   <form_key>kGQhMGzgIpZhJOOP</form_key>
    <name>Instamojo_Imojo</name>
    <channel>community</channel>
    <version_ids>
       <version_ids>2</version_ids>
    </version_ids>
-   <summary>Make payments using Instamojo Payment Gateway</summary>
+   <summary>Collect Payments Instantly with a Link</summary>
    <description>Instamojo lets you collect payments instantly. Start simply by creating a link by adding details. Share with your audience, through a link. And start collecting payments in minutes!
 
 We provide you an out-of-the-box e-commerce framework that takes care of mundane stuff from payments to delivery. All you need to do is share a link wherever your audience is.
 </description>
    <license>MIT</license>
    <license_uri>http://opensource.org/licenses/MIT</license_uri>
-   <version>0.0.1</version>
+   <version>0.0.4</version>
    <stability>stable</stability>
-   <notes>Initial release</notes>
+   <notes>Fixed path to Global Configuration file.</notes>
    <authors>
       <name>
          <name>Instamojo</name>
@@ -43,7 +43,7 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
             <max/>
          </max>
          <files>
-            <files>                 </files>
+            <files>  </files>
          </files>
       </package>
       <extension>
@@ -61,25 +61,30 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
    <contents>
       <target>
          <target>magelocal</target>
-         <target>magelocal</target>
+         <target>magecommunity</target>
          <target>magedesign</target>
+         <target>mageetc</target>
       </target>
       <path>
          <path/>
-         <path>Instamojo</path>
+         <path>Instamojo/Imojo</path>
          <path>frontend/base/default/template/imojo</path>
+         <path>modules/Instamojo_Imojo.xml</path>
       </path>
       <type>
          <type>file</type>
          <type>dir</type>
          <type>dir</type>
+         <type>file</type>
       </type>
       <include>
          <include/>
          <include/>
          <include/>
+         <include/>
       </include>
       <ignore>
+         <ignore/>
          <ignore/>
          <ignore/>
          <ignore/>
