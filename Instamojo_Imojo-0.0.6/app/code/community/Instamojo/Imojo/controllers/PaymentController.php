@@ -120,6 +120,7 @@ class Instamojo_Imojo_PaymentController extends Mage_Core_Controller_Front_Actio
             $this->_processInvoice($orderId);
             $order->setState(Mage_Sales_Model_Order::STATE_PROCESSING, true)->save();
             $order->setState(Mage_Sales_Model_Order::STATE_PENDING_PAYMENT, false)->save();
+            Mage::log("Pending payment is set to False", Zend_Log::DEBUG, $LOG_FILE_NAME);
             $order->sendNewOrderEmail();
             $order->setEmailSent(true);
 

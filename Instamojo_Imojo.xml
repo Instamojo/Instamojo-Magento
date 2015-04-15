@@ -1,5 +1,5 @@
 <_>
-   <form_key>kGQhMGzgIpZhJOOP</form_key>
+   <form_key>68HNfJQQJRJwiGzS</form_key>
    <name>Instamojo_Imojo</name>
    <channel>community</channel>
    <version_ids>
@@ -12,9 +12,9 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
 </description>
    <license>MIT</license>
    <license_uri>http://opensource.org/licenses/MIT</license_uri>
-   <version>0.0.4</version>
+   <version>0.0.6</version>
    <stability>stable</stability>
-   <notes>Fixed path to Global Configuration file.</notes>
+   <notes>Fixed issue with template path.</notes>
    <authors>
       <name>
          <name>Instamojo</name>
@@ -43,7 +43,7 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
             <max/>
          </max>
          <files>
-            <files>  </files>
+            <files>    </files>
          </files>
       </package>
       <extension>
