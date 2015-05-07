@@ -1,20 +1,26 @@
 <_>
-   <form_key>68HNfJQQJRJwiGzS</form_key>
+   <form_key>XvYSCDSyQOjnbvWr</form_key>
    <name>Instamojo_Imojo</name>
    <channel>community</channel>
    <version_ids>
       <version_ids>2</version_ids>
    </version_ids>
    <summary>Collect Payments Instantly with a Link</summary>
-   <description>Instamojo lets you collect payments instantly. Start simply by creating a link by adding details. Share with your audience, through a link. And start collecting payments in minutes!
+   <description>This extension allows you to use Instamojo as Payment Gateway.
 
-We provide you an out-of-the-box e-commerce framework that takes care of mundane stuff from payments to delivery. All you need to do is share a link wherever your audience is.
-</description>
+Brief steps:
+
+- Create Payment link on Instamojo website.
+- Fill up extension&apos;s configuration in Magento&apos;s admin backend under Payment methods.
+- Select Instamojo during checkout.
+
+
+For detailed steps with screenshots visit our GitHub page: https://github.com/Instamojo/Instamojo-Magento</description>
    <license>MIT</license>
    <license_uri>http://opensource.org/licenses/MIT</license_uri>
-   <version>0.0.6</version>
+   <version>0.0.9</version>
    <stability>stable</stability>
-   <notes>Fixed issue with template path.</notes>
+   <notes>Updated PHP version range from 5.3.0 - 5.6.6 to 5.2.0 - 5.6.8</notes>
    <authors>
       <name>
          <name>Instamojo</name>
@@ -26,8 +32,8 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
          <email>dev@instamojo.com</email>
       </email>
    </authors>
-   <depends_php_min>5.3.0</depends_php_min>
-   <depends_php_max>5.6.6</depends_php_max>
+   <depends_php_min>5.2.0</depends_php_min>
+   <depends_php_max>5.6.8</depends_php_max>
    <depends>
       <package>
          <name>
@@ -43,7 +49,7 @@ We provide you an out-of-the-box e-commerce framework that takes care of mundane
             <max/>
          </max>
          <files>
-            <files>    </files>
+            <files>       </files>
          </files>
       </package>
       <extension>
