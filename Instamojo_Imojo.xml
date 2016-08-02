@@ -1,5 +1,5 @@
 <_>
-   <form_key>xIlX1uhrU7wjpoep</form_key>
+   <form_key>duHXjhjgZ3pdcfX6</form_key>
    <name>Instamojo_Imojo</name>
    <channel>community</channel>
    <version_ids>
@@ -71,13 +71,9 @@ This is what we are going to enter in the plugin&apos;s settings in Magento back
 For detailed steps with screenshots visit our GitHub page: https://github.com/Instamojo/Instamojo-Magento</description>
    <license>MIT</license>
    <license_uri>http://opensource.org/licenses/MIT</license_uri>
-   <version>0.1.0</version>
+   <version>0.1.5</version>
    <stability>stable</stability>
-   <notes>- Removed buggy invoice generation code.
-- Fixed issue related to orders not showing up in my orders.
-- Plugin will now handle failed payments as well.
-- Fixed redirection URL.
-- Added and fixed some log messages.</notes>
+   <notes>- Updated PHP version to 5.6.23</notes>
    <authors>
       <name>
          <name>Instamojo</name>
@@ -90,7 +86,7 @@ For detailed steps with screenshots visit our GitHub page: https://github.com/In
       </email>
    </authors>
    <depends_php_min>5.2.0</depends_php_min>
-   <depends_php_max>5.6.8</depends_php_max>
+   <depends_php_max>5.6.23</depends_php_max>
    <depends>
       <package>
          <name>
@@ -106,7 +102,7 @@ For detailed steps with screenshots visit our GitHub page: https://github.com/In
             <max/>
          </max>
          <files>
-            <files>        </files>
+            <files>             </files>
          </files>
       </package>
       <extension>
@@ -153,4 +149,8 @@ For detailed steps with screenshots visit our GitHub page: https://github.com/In
          <ignore/>
       </ignore>
    </contents>
+   <page>1</page>
+   <limit>200</limit>
+   <folder/>
+   <package/>
 </_>
