@@ -82,7 +82,7 @@ In this section we will learn how to create a product along with how to get the 
 
 Enter this value in the **Custom field** field of the Instamojo module configuration page in Magento.
 
-#### Auth
+### Auth
 ----
 Go the [Instamojo developers](https://www.instamojo.com/developers/) page, if your are not logged in already then login first and then you'll see the value of `API Key`,  `Auth token`,  `Private salt` there on the bottom left side of the page. Copy these values and paste them in their respective fields in  **Instamojo Checkout** configuration.
 
