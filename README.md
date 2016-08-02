@@ -59,7 +59,7 @@ Now make sure **Enabled** is set to **Yes** if you want to use this extension du
 
 ### Creating a Product
 ----
-In this section we will learn how to create a product along with how to get the required values for `Payment Link` and `Custom Field` .
+In this section we will learn how to create a product along with how to get the required values for `Payment Link` and `Custom Field`.
 
 - Create a product by clicking on **Add a Product** on your Instamojo dashboard and choose the category **Other**.
 
