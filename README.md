@@ -57,31 +57,35 @@ Here you will see a list of Payment methods already installed along with **Insta
 
 Now make sure **Enabled** is set to **Yes** if you want to use this extension during checkout, and change the values of **Payment Action** and **New order status** to **Authorize and Capture** and **Processing** respectively.
 
+### Creating a Product
+----
+In this section we will learn how to create a product along with how to get the required values for `Payment Link` and `Custom Field` .
+
+- Create a product by clicking on **Add a Product** on your Instamojo dashboard and choose the category **Other**.
+
+  Set the price to Rs. 10 and enable **"Pay what you want"**.  Under **Title** and **Description**, you may enter something that describes your business and the nature of the products being sold.
+
+  Under **Advanced settings** of the same product there's a field **Custom Redirection URL**. Here if your website's url is **http://www.example.com** then use **http://www.example.com/index.php/imojo/payment/response/** as **Custom Redirection URL**.
+
+![enter image description here](http://i.imgur.com/eNtCxCX.png)
+
+ Click on **Add Product to Store** to save the product.
+ 
+- Copy the product URL and paste this in **Payment Link** field. URL's format is usually: **https://www.instamojo.com/username/slug/**.
+- On the product page go to **More options** and click on **Custom Fields**. Create a custom field called **Order ID** and mark it as **required**. Click on **Add Custom Field** to save this custom field. 
+
+ ![enter image description here](http://i.imgur.com/qhCMtJc.png)
+
+ After the custom field has been created **Existing Custom Fields** section will appear. Copy the name shown under **Field ID** column, its format is **Field_xxxx**, where **xxxx** are some numbers(Note that this is case sensitive!). In this example the value is **Field_6473**.
+
+![enter image description here](http://i.imgur.com/XRnsxwz.png)
+
+Enter this value in the **Custom field** field of the Instamojo module configuration page in Magento.
+
 #### Auth
 ----
 Go the [Instamojo developers](https://www.instamojo.com/developers/) page, if your are not logged in already then login first and then you'll see the value of `API Key`,  `Auth token`,  `Private salt` there on the bottom left side of the page. Copy these values and paste them in their respective fields in  **Instamojo Checkout** configuration.
 
-Now only **Payment URL** and **Custom Field** are left.
-
-#### Creating a Payment Link with Custom Field
-----
-In this section we will learn how to create a `Payment link` along with how to get the required value for `Custom Field` .
-
-- Create a Payment Link on Instamojo under the **Services/Membership** option.
-  
-  Set the price to Rs. 10 and enable **"Pay what you want"**.  Under **Title** and **Description**, you may enter something that describes your business and the nature of the products being sold.
-  
-  Under **Advanced settings** of the same link there's a field **Custom Redirection URL**, here you are supposed enter **http://www.example.com/index.php/imojo/payment/response/** as **Custom Redirection URL**.
-
-![enter image description here](http://i.imgur.com/6BpGcsq.png)
-
-- Now on Payment links's page go to **More options** and click on **Custom Fields**.
-
- Now create a custom field named day **order_id** and mark it as **required** and **save** it. In the custom field creation page, hover over the field you just created. You'll see a field with the format **Field_<number>**. Note down the full name (including the **Field_** bit. Note that this is case sensitive!).
-
-![enter image description here](http://i.imgur.com/0ECtqa3.png)
-
-Enter this name in the **Custom field** field of the Instamojo extension configuration page in Magento and do the same for for the **Payment URL.**
 
 At the end the Configuration will look something like this:
 
