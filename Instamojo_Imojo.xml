@@ -1,12 +1,12 @@
 <_>
-   <form_key>duHXjhjgZ3pdcfX6</form_key>
+   <form_key>5inwHQXyEQUreSDV</form_key>
    <name>Instamojo_Imojo</name>
    <channel>community</channel>
    <version_ids>
       <version_ids>2</version_ids>
    </version_ids>
    <summary>Collect Payments Instantly with a Link</summary>
-   <description>Instamojo lets you collect payments instantly. Start simply by creating a link by adding details. Share with your audience, through a link. And start collecting payments in minutes!
+   <description>Instamojo lets you collect payments instantly. Start simply by creating a product by adding details. Share with your audience, through a link. And start collecting payments in minutes!
 
 &lt;br /&gt;
 &lt;br /&gt;
@@ -20,18 +20,21 @@ This extension allows you to use Instamojo as Payment Gateway.
 &lt;br /&gt;
 
 &lt;ul&gt;
-&lt;li&gt; Create a payment link of type Services/membership on our website http://www.instamojo.com&lt;/li&gt;
+&lt;li&gt; Create a product by clicking on &lt;b&gt;Add a Product&lt;/b&gt; on your Instamojo dashboard and choose the category &lt;b&gt;Other&lt;/b&gt;.&lt;/li&gt;
 &lt;li&gt;Set its base price as 10 and check &amp;quot;Use &apos;Pay What You Want&apos;&amp;quot; option.
 &lt;/li&gt;
 &lt;li&gt;
 If your website is say http://www.example.com then use http://www.example.com/index.php/imojo/payment/response/ as Custom Redirection URL. This is required to mark the payment as completed after redirection.
 &lt;/li&gt;
 &lt;li&gt;
-Now save the Payment link and go to More Options -&amp;gt; Custom Fields.
+Now save the Product.
 &lt;/li&gt;
 &lt;li&gt;
-Create a custom field, let&apos;s say you named it &amp;quot;Orderd ID&amp;quot; and save it. The name is not important, the actual field name of this Custom Field will show up when you hover over that field, it has the format of &lt;b&gt;Field_xxxxx&lt;/b&gt;, where &amp;quot;xxxxx&amp;quot; are numbers.
+On the product page go to More options and click on Custom Fields. Create a custom field called &lt;b&gt;Order ID&lt;/b&gt; and mark it as required. Click on Add Custom Field to save this custom field.
 This is what we are going to enter in the plugin&apos;s settings in Magento backend.
+&lt;/li&gt;
+&lt;li&gt;
+After the custom field has been created &lt;b&gt;Existing Custom Fields&lt;/b&gt; section will appear. Copy the name shown under &lt;b&gt;Field ID&lt;/b&gt; column, its format is &lt;b&gt;Field_xxxx&lt;/b&gt;, where &lt;b&gt;xxxx&lt;/b&gt; are some numbers(Note that this is case sensitive!).
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;br /&gt;
@@ -58,10 +61,10 @@ This is what we are going to enter in the plugin&apos;s settings in Magento back
 &lt;b&gt;Private Salt:&lt;/b&gt; Get this from http://www.instamojo.com/developers
 &lt;/li&gt;
 &lt;li&gt;
-&lt;b&gt;Payment URL:&lt;/b&gt; Payment link&apos;s URL
+&lt;b&gt;Product URL:&lt;/b&gt; Product&apos;s URL
 &lt;/li&gt;
 &lt;li&gt;
-&lt;b&gt;Custom Field:&lt;/b&gt; Field_xxxx format field name we got from hovering over the Custom field.
+&lt;b&gt;Custom Field:&lt;/b&gt; Field ID of the custom field.
 &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -71,9 +74,9 @@ This is what we are going to enter in the plugin&apos;s settings in Magento back
 For detailed steps with screenshots visit our GitHub page: https://github.com/Instamojo/Instamojo-Magento</description>
    <license>MIT</license>
    <license_uri>http://opensource.org/licenses/MIT</license_uri>
-   <version>0.1.5</version>
+   <version>0.1.11</version>
    <stability>stable</stability>
-   <notes>- Updated PHP version to 5.6.23</notes>
+   <notes>- Fixed URL</notes>
    <authors>
       <name>
          <name>Instamojo</name>
@@ -86,7 +89,7 @@ For detailed steps with screenshots visit our GitHub page: https://github.com/In
       </email>
    </authors>
    <depends_php_min>5.2.0</depends_php_min>
-   <depends_php_max>5.6.23</depends_php_max>
+   <depends_php_max>7.1.4</depends_php_max>
    <depends>
       <package>
          <name>
@@ -102,7 +105,7 @@ For detailed steps with screenshots visit our GitHub page: https://github.com/In
             <max/>
          </max>
          <files>
-            <files>             </files>
+            <files>                             </files>
          </files>
       </package>
       <extension>
@@ -149,8 +152,4 @@ For detailed steps with screenshots visit our GitHub page: https://github.com/In
          <ignore/>
       </ignore>
    </contents>
-   <page>1</page>
-   <limit>200</limit>
-   <folder/>
-   <package/>
 </_>
