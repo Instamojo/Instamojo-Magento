@@ -23,7 +23,7 @@ class Instamojo_Imojo_PaymentController extends Mage_Core_Controller_Front_Actio
 
             // Set status to payment pending
             $order->setState(Mage_Sales_Model_Order::STATE_PENDING_PAYMENT, true)->save();
-            $amount = $order-> getBaseGrandTotal();
+            $amount = $order->getGrandTotal();
             $email = $order->getCustomerEmail();
             $name = $order->getCustomerName();          
             $phone = substr(str_replace(' ', '', $order->getBillingAddress()->getTelephone()), 0, 20);
